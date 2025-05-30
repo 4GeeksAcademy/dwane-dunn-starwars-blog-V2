@@ -2,7 +2,7 @@
 import useGlobalReducer from "../hooks/useGlobalReducer.jsx";
 // My Custom Pages
 import { PeopleList } from "./PeopleList.jsx";
-import { PLanetList } from "./PlanentList.jsx";
+import { PlanetList } from "./PlanetList.jsx";
 import { VehicleList } from "./VehicleList.jsx";
 
 export const Home = () => {
