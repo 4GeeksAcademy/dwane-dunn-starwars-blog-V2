@@ -12,12 +12,20 @@ export const initialStore=()=>{
         title: "Do my homework",
         background: null,
       }
-    ]
+
+    ],
+    people: []
+
   }
 }
 
 export default function storeReducer(store, action = {}) {
   switch(action.type){
+    case 'set_people':
+      return {
+        ...store,
+        people:action.payload
+      }
     case 'add_task':
 
       const { id,  color } = action.payload

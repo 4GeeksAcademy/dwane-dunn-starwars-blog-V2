@@ -10,10 +10,13 @@ export const PeopleList = () => {
 
 const fetchPeople = async () => {
   try {
-      // const api_url = `https://www.swapi.tech/api/people?page=1&limit=8&expanded=true`;
+      const api_url = `https://www.swapi.tech/api/people?page=1&limit=8&expanded=true`;
       const response = await fetch(`{api_url}`);
       const result = await response.json();
-      // dispatch the result
+     dispatch({
+      type: "set_people",
+      payload: result.results
+     })
   } catch (error){
     // set error if there was one
   } finally {
@@ -58,4 +61,5 @@ const fetchPeople = async () => {
       </Link>
     </div>
   );
+}
 };
