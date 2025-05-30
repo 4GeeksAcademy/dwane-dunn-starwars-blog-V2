@@ -5,7 +5,7 @@ import rigoImageUrl from "../assets/img/rigo-baby.jpg"  // Import an image asset
 import useGlobalReducer from "../hooks/useGlobalReducer";  // Import a custom hook for accessing the global state
 
 // Define and export the Single component which displays individual item details.
-export const PLanet = props => {
+export const Planet = props => {
   // Access the global state using the custom hook.
   const { store } = useGlobalReducer()
 
