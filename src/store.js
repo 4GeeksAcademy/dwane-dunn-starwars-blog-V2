@@ -27,19 +27,19 @@ export default function storeReducer(store, action = {}) {
       return {
         ...store,
         people:action.payload
-      },
+      }
 
     case 'set_planets':
       return {
         ...store,
         planets: action.payload
-      },
-      
+      }
+
     case 'set_vehicles':
       return {
         ...store,
         vehicles: action.payload
-      },
+      }
     
     default:
       throw Error('Unknown action.');
