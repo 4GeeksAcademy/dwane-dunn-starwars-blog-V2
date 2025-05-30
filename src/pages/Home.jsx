@@ -15,6 +15,9 @@ export const Home = () => {
 			<p>
 				{/* <img src={rigoImageUrl} /> */}
 			</p>
+			<PeopleList/>
+			<PlanetList/>
+			<VehicleList/>
 		</div>
 	);
 }; 
