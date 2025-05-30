@@ -61,4 +61,5 @@ export const VehicleList = () => {
       </Link>
     </div>
   );
+}
 };
