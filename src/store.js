@@ -15,7 +15,8 @@ export const initialStore=()=>{
 
     ],
     people: [],
-    planets: []
+    planets: [],
+    vehicles: [],
 
   }
 }
@@ -27,19 +28,19 @@ export default function storeReducer(store, action = {}) {
         ...store,
         people:action.payload
       },
+
     case 'set_planets':
       return {
         ...store,
         planets: action.payload
-      }
-    case 'add_task':
-
-      const { id,  color } = action.payload
-
+      },
+      
+    case 'set_vehicles':
       return {
         ...store,
-        todos: store.todos.map((todo) => (todo.id === id ? { ...todo, background: color } : todo))
-      };
+        vehicles: action.payload
+      },
+    
     default:
       throw Error('Unknown action.');
   }    

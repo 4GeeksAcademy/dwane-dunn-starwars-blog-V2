@@ -6,6 +6,27 @@ export const VehicleList = () => {
   // Access the global state and dispatch function using the useGlobalReducer hook.
   const { store, dispatch } = useGlobalReducer()
 
+
+   const fetchVehicles = async () => {
+    try {
+        const api_url = `https://www.swapi.tech/api/vehicles?page=1&limit=8&expanded=true`;
+        const response = await fetch(`{api_url}`);
+        const result = await response.json();
+       dispatch({
+        type: "set_Vehicles",
+        payload: result.results
+       })
+    } catch (error){
+      // set error if there was one
+    } finally {
+      // run anything else here
+    }
+  
+    useEffect(()=> {
+      fetchVehicles();
+    }, []);
+
+
   return (
     <div className="container">
       <ul className="list-group">
