@@ -2,7 +2,7 @@
 import useGlobalReducer from "../hooks/useGlobalReducer.jsx";
 // My Custom Pages
 import { PeopleList } from "./PeopleList.jsx";
-import { PlanetList } from "./PlanetList.jsx";
+import {Planets} from './Planets.jsx'
 import { VehicleList } from "./VehicleList.jsx";
 
 export const Home = () => {
@@ -12,11 +12,9 @@ export const Home = () => {
 	return (
 		<div className="text-center mt-5">
 			<h1>Starwars Blog List</h1>
-			<p>
-				{/* <img src={rigoImageUrl} /> */}
-			</p>
+			
 			<PeopleList/>
-			<PlanetList/>
+			<Planets/>
 			<VehicleList/>
 		</div>
 	);
