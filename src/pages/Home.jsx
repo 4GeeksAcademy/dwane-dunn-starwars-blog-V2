@@ -3,6 +3,7 @@ import useGlobalReducer from '../hooks/useGlobalReducer.jsx';
 import { PeopleList } from './PeopleList.jsx';
 import { Planets } from './Planets.jsx';
 import { VehicleList } from './VehicleList.jsx';
+import Test from './Test.jsx';
 
 export const Home = () => {
   const { store, dispatch } = useGlobalReducer();
@@ -10,7 +11,7 @@ export const Home = () => {
   return (
     <div className="text-center mt-5">
       <h1>Starwars Blog List - Yes?</h1>
-
+      <Test />
       <PeopleList />
       <Planets />
       <VehicleList />
