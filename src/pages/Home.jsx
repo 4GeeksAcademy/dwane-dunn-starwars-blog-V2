@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import useGlobalReducer from '../hooks/useGlobalReducer.jsx';
 // My Custom Pages
 import { PeopleList } from './PeopleList.jsx';
-import { Planets } from './Planets.jsx';
+import { PlanetList } from './PlanetList.jsx';
 import { VehicleList } from './VehicleList.jsx';
 
 export const Home = () => {
@@ -46,7 +46,7 @@ export const Home = () => {
     }
   };
 
-  // Function to fetch vehicles data from the Star Wars API
+  // Vehicles data from the Star Wars API
   const fetchVehicles = async () => {
     try {
       const api_url = `https://www.swapi.tech/api/vehicles?page=1&limit=8&expanded=true`;
@@ -76,7 +76,7 @@ export const Home = () => {
   return (
     <div className="text-center mt-5">
       <PeopleList />
-      <Planets />
+      {/* <Planets /> */}
       <VehicleList />
     </div>
   );
