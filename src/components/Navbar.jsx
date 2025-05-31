@@ -9,8 +9,16 @@ export const Navbar = () => {
 					<span className="navbar-brand mb-0 h1">Starwars</span>
 				</Link>
 				<div className="ml-auto">
-					<Link to="/demo">
-						<button className="btn btn-primary">Check the Context in action</button>
+					<Link to="/">
+						<button
+              className="btn btn-primary dropdown-toggle"
+              type="button"
+              id="dropdownMenuLink"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Favorites <span className="badge bg-secondary">1</span>
+            </button>
 					</Link>
 				</div>
 			</div>
