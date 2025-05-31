@@ -31,12 +31,11 @@ export const PeopleList = () => {
 
     return (
       <div className="container">
-        <h1>People List</h1>
         <ul className="list-group">
           {/* Map over the 'people' array from the store and render each person as a card element */}
           {/* BUILD THE PERSON CARD! */}
           {store &&
-            store.people?.map((person) => {
+            store.people.map((person) => {
               return (
                 <li
                   key={person.uid} // React key for list items.
