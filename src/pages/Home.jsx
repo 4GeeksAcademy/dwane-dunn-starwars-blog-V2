@@ -16,7 +16,7 @@ export const Home = () => {
       const api_url = `https://www.swapi.tech/api/people?page=1&limit=8&expanded=true`;
       const response = await fetch(api_url);
       const result = await response.json();
-      console.log('result:', result.results);
+      // console.log('result:', result.results);
       dispatch({
         type: 'set_people',
         payload: result.results,
@@ -68,15 +68,13 @@ export const Home = () => {
     fetchPeople(); // Get the people data
     fetchPlanets(); // Get the planets data
     fetchVehicles(); // Get the vehicles data
-    console.log('store.people:', store.people);
-    console.log('store.planets:', store.planets);
-    console.log('store.vehicles:', store.vehicles);
+    // console.log('store.people:', store.people);
+    // console.log('store.planets:', store.planets);
+    // console.log('store.vehicles:', store.vehicles);
   }, []);
-
+  console.log('store:', store);
   return (
     <div className="text-center mt-5">
-      <h1>Starwars Blog List - Yes?</h1>
-
       <PeopleList />
       <Planets />
       <VehicleList />
