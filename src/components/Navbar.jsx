@@ -9,7 +9,7 @@ export const Navbar = () => {
 					<span className="navbar-brand mb-0 h1">Starwars</span>
 				</Link>
 				<div className="ml-auto">
-					<Link to="/">
+					{/* <Link to="/"> */}
 						<button
               className="btn btn-primary dropdown-toggle"
               type="button"
@@ -19,7 +19,7 @@ export const Navbar = () => {
             >
               Favorites <span className="badge bg-secondary">1</span>
             </button>
-					</Link>
+					{/* </Link> */}
 				</div>
 			</div>
 		</nav>
