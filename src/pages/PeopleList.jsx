@@ -7,12 +7,14 @@ export const PeopleList = () => {
   // Access the global state and dispatch function using the useGlobalReducer hook.
   const { store, dispatch } = useGlobalReducer()
 
+  // https://github.com/breatheco-de/swapi-images/blob/master/public/images/planets/11.jpg?raw=true
 
 const fetchPeople = async () => {
   try {
       const api_url = `https://www.swapi.tech/api/people?page=1&limit=8&expanded=true`;
       const response = await fetch(`{api_url}`);
       const result = await response.json();
+      console.log('result:', result.result)
      dispatch({
       type: "set_people",
       payload: result.results
