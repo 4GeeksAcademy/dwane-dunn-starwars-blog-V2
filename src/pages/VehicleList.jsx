@@ -31,7 +31,7 @@ export const VehicleList = () => {
     <div className="container">
       <ul className="list-group">
         {/* Map over the 'todos' array from the store and render each item as a list element */}
-        {store && store.todos?.map((item) => {
+        {store && store.vehicles?.map((vehicle) => {
           return (
             <li
               key={item.id}  // React key for list items.
@@ -39,17 +39,17 @@ export const VehicleList = () => {
               style={{ background: item.background }}> 
               
               {/* Link to the detail page of this todo. */}
-              <Link to={"/single/" + item.id}>Link to: {item.title} </Link>
+              <Link to={"/vehicle/" + vehicle.uid}>Link to: {vehicle.title} </Link>
               
               <p>Open file ./store.js to see the global store that contains and updates the list of colors</p>
               
-              <button className="btn btn-success" 
+              {/* <button className="btn btn-success" 
                 onClick={() => dispatch({
                   type: "add_task", 
                   payload: { id: item.id, color: '#ffa500' }
                 })}>
                 Change Color
-              </button>
+              </button> */}
             </li>
           );
         })}
