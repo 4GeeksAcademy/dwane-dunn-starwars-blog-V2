@@ -29,9 +29,7 @@ export const Home = () => {
     fetchPeople();
     console.log('store.people:', store.people);
   }, []);
-  // if (loading) {
-  //   return <div className="text-center mt-5">Loading...</div>;
-  // }
+
   return (
     <div className="text-center mt-5">
       <h1>Starwars Blog List - Yes?</h1>
