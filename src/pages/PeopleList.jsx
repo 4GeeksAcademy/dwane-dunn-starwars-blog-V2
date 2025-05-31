@@ -12,9 +12,9 @@ export const PeopleList = () => {
   const fetchPeople = async () => {
     try {
       const api_url = `https://www.swapi.tech/api/people?page=1&limit=8&expanded=true`;
-      const response = await fetch(`${api_url}`);
+      const response = await fetch(`{api_url}`);
       const result = await response.json();
-      console.log('result:', result.results);
+      console.log('result:', result);
       dispatch({
         type: 'set_people',
         payload: result.results,
