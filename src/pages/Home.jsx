@@ -72,7 +72,7 @@ export const Home = () => {
     // console.log('store.planets:', store.planets);
     // console.log('store.vehicles:', store.vehicles);
   }, []);
-  console.log('store:', store);
+
   return (
     <div className="text-center mt-5">
       <PeopleList />
