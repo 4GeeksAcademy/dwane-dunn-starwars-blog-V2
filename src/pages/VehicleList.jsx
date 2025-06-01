@@ -40,7 +40,7 @@ export const VehicleList = () => {
                 >
                   {/* Link to the detail page of this todo. */}
                   <Link to={'/vehicle/' + vehicle.uid}>
-                    Link to: {vehicle.properties.title}{' '}
+                    Link to: {vehicle.properties.name}{' '}
                   </Link>
 
                   {/* <p>
