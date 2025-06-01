@@ -2,6 +2,7 @@
 import { Link } from 'react-router-dom';
 import useGlobalReducer from '../hooks/useGlobalReducer'; // Custom hook for accessing the global state.
 import { useEffect } from 'react';
+import { LuPlaneTakeoff } from 'react-icons/lu';
 
 export const PeopleList = () => {
   // Access the global state and dispatch function using the useGlobalReducer hook.
