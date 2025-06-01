@@ -35,7 +35,7 @@ export const VehicleList = () => {
               <>
                 <h2>Vehicles</h2>
                 <li
-                  key={vehicles.properties.uid} // React key for list items.
+                  key={vehicle.properties.uid} // React key for list items.
                   className="list-group-item d-flex justify-content-between"
                   // style={{ background: item.background }}
                 >

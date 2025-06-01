@@ -14,7 +14,7 @@ export const PlanetList = () => {
           store.planets?.map((planet) => {
             return (
               <li
-                key={planet.properties.id} // React key for list items.
+                key={planet.properties.uid} // React key for list items.
                 className="list-group-item d-flex justify-content-between"
                 // style={{ background: item.background }}
               >
