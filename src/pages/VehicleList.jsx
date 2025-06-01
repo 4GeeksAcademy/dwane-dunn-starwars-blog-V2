@@ -33,7 +33,6 @@ export const VehicleList = () => {
           store.vehicles?.map((vehicle) => {
             return (
               <>
-                <h2>Vehicles</h2>
                 <li
                   key={vehicle.uid} // React key for list items.
                   className="list-group-item d-flex justify-content-between"
