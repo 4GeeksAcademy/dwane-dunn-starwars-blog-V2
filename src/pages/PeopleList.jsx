@@ -13,6 +13,7 @@ export const PeopleList = () => {
   return (
     <div className="container">
       <ul className="list-group">
+        <h2>People</h2>
         {/* Map over the 'people' array from the store and render each person as a card element */}
         {/* BUILD THE PERSON CARD! */}
         {store &&

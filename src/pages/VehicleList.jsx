@@ -28,6 +28,7 @@ export const VehicleList = () => {
   return (
     <div className="container">
       <ul className="list-group">
+        <h2 className="text-align-left">Vehicles</h2>
         {/* Map over the 'todos' array from the store and render each item as a list element */}
         {store &&
           store.vehicles?.map((vehicle) => {

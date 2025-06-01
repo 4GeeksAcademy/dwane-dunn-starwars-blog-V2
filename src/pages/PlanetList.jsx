@@ -9,6 +9,7 @@ export const PlanetList = () => {
   return (
     <div className="container">
       <ul className="list-group">
+        <h2>Planets</h2>
         {/* Map over the 'todos' array from the store and render each item as a list element */}
         {store &&
           store.planets?.map((planet) => {
