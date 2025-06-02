@@ -14,24 +14,29 @@ export const PeopleList = () => {
   return (
     <>
       <div className="container-fluid border border-success">
-        <h2 className="">Planets</h2>
+        <h2 className="">Characters</h2>
       </div>
-      <div className="d-flex justify-content-around flex-nowrap border border-danger">
+      <div className="d-flex gap-4 justify-content-around flex-nowrap border border-danger">
         {store &&
           store.people.map((person) => {
             return (
-              <>
-                <div class="card" style={{ width: '18rem' }}>
+              <div key={person.uid}>
+                <div class="card" style={{ width: '18rem' }} key={person.uid}>
                   <img
                     src="https://placehold.co/400x200"
                     class="card-img-top"
-                    alt="placehold"
+                    alt={person.name}
                   />
                   <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Name:</p>
-                    <p class="card-text">Hair Color:</p>
-                    <p class="card-text">Eye Color:</p>
+                    <h5 class="card-title">{person.description}</h5>
+                    <p class="card-text">Name:{person.properties.name}</p>
+                    <p class="card-text">Gender:{person.properties.gender}</p>
+                    <p class="card-text">
+                      Hair Color:{person.properties.hair_color}
+                    </p>
+                    <p class="card-text">
+                      Eye Color:{person.properties.eye_color}
+                    </p>
                     <div className="button-wrap d-flex align-items-center justify-content-evenly">
                       <a href="#" class="btn btn-outline-primary btn-sm">
                         Learn More
@@ -40,7 +45,7 @@ export const PeopleList = () => {
                     </div>
                   </div>
                 </div>
-              </>
+              </div>
             );
           })}
       </div>
