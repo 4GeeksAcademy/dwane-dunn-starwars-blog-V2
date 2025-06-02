@@ -1,7 +1,7 @@
 // Import necessary components from react-router-dom and other parts of the application.
 import { Link } from 'react-router-dom';
 import useGlobalReducer from '../hooks/useGlobalReducer'; // Custom hook for accessing the global state.
-
+import { FaRegHeart } from 'react-icons/fa';
 export const VehicleList = () => {
   // Access the global state and dispatch function using the useGlobalReducer hook.
   const { store, dispatch } = useGlobalReducer();
@@ -34,26 +34,28 @@ export const VehicleList = () => {
           store.vehicles?.map((vehicle) => {
             return (
               <div key={vehicle.uid}>
-                <div class="card" style={{ width: '18rem' }}>
+                <div className="card" style={{ width: '18rem' }}>
                   <img
                     src="https://placehold.co/400x200"
-                    class="card-img-top"
+                    className="card-img-top"
                     alt={vehicle.description}
                   />
-                  <div class="card-body">
-                    <h5 class="card-title">{vehicle.properties.name}</h5>
-                    <p class="card-text">
+                  <div className="card-body">
+                    <h5 className="card-title">{vehicle.properties.name}</h5>
+                    <p className="card-text">
                       Capacity:{vehicle.properties.cargo_capacity}
                     </p>
-                    <p class="card-text">
+                    <p className="card-text">
                       Passengers:{vehicle.properties.passengers}
                     </p>
-                    <p class="card-text">Model:{vehicle.properties.model}</p>
-                    <p class="card-text">
+                    <p className="card-text">
+                      Model:{vehicle.properties.model}
+                    </p>
+                    <p className="card-text">
                       Mfr:{vehicle.properties.manufacturerer}
                     </p>
                     <div className="button-wrap d-flex align-items-center justify-content-evenly">
-                      <a href="#" class="btn btn-outline-primary btn-sm">
+                      <a href="#" className="btn btn-outline-primary btn-sm">
                         Learn More
                       </a>
                       <FaRegHeart />

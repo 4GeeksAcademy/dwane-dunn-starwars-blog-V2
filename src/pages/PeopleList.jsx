@@ -21,24 +21,30 @@ export const PeopleList = () => {
           store.people.map((person) => {
             return (
               <div key={person.uid}>
-                <div class="card" style={{ width: '18rem' }} key={person.uid}>
+                <div
+                  className="card"
+                  style={{ width: '18rem' }}
+                  key={person.uid}
+                >
                   <img
                     src="https://placehold.co/400x200"
-                    class="card-img-top"
+                    className="card-img-top"
                     alt={person.name}
                   />
-                  <div class="card-body">
-                    <h5 class="card-title">{person.description}</h5>
-                    <p class="card-text">Name:{person.properties.name}</p>
-                    <p class="card-text">Gender:{person.properties.gender}</p>
-                    <p class="card-text">
+                  <div className="card-body">
+                    <h5 className="card-title">{person.description}</h5>
+                    <p className="card-text">Name:{person.properties.name}</p>
+                    <p className="card-text">
+                      Gender:{person.properties.gender}
+                    </p>
+                    <p className="card-text">
                       Hair Color:{person.properties.hair_color}
                     </p>
-                    <p class="card-text">
+                    <p className="card-text">
                       Eye Color:{person.properties.eye_color}
                     </p>
                     <div className="button-wrap d-flex align-items-center justify-content-evenly">
-                      <a href="#" class="btn btn-outline-primary btn-sm">
+                      <a href="#" className="btn btn-outline-primary btn-sm">
                         Learn More
                       </a>
                       <FaRegHeart />
