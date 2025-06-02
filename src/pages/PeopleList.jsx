@@ -13,10 +13,10 @@ export const PeopleList = () => {
 
   return (
     <>
-      <div className="container-fluid border border-success">
+      <div className="d-flex">
         <h2 className="">Characters</h2>
       </div>
-      <div className="d-flex gap-4 justify-content-around flex-nowrap border border-danger">
+      <div className="ps-4 d-flex gap-4 flex-nowrap overflow-x-scroll">
         {store &&
           store.people.map((person) => {
             return (

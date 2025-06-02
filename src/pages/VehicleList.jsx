@@ -8,9 +8,11 @@ export const VehicleList = () => {
   const { store, dispatch } = useGlobalReducer();
 
   return (
-    <div className="container">
-      <ul className="list-group">
-        <h2 className="text-align-left">Vehicles</h2>
+    <div className="d-flex">
+      <div className="d-flex">
+        <h2 className="">Vehicles</h2>
+      </div>
+      <div className="d-flex gap-4 flex-nowrap overflow-x-scroll">
         {/* Map over the 'todos' array from the store and render each item as a list element */}
         {store &&
           store.vehicles?.map((vehicle) => {
@@ -44,11 +46,11 @@ export const VehicleList = () => {
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> // card - end
             );
           })}
-      </ul>
-      <br />
-    </div>
+      </div>
+      // card-wrap-end
+    </div> // container -end
   );
 };
