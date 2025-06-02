@@ -32,8 +32,8 @@ export const PeopleList = () => {
                     <p class="card-text">Name:</p>
                     <p class="card-text">Hair Color:</p>
                     <p class="card-text">Eye Color:</p>
-                    <a href="#" class="btn btn-primary">
-                      Go somewhere
+                    <a href="#" class="btn btn-outline-primary btn-sm">
+                      Learn More
                     </a>
                   </div>
                 </div>
