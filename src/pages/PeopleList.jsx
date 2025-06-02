@@ -20,20 +20,24 @@ export const PeopleList = () => {
         {store &&
           store.people.map((person) => {
             return (
-              <div>
-                <div style={({ width: '400px' }, { height: '200px' })}>
-                  <img src="https://placehold.co/400x200" alt="PLacehold" />
+              <>
+                <div class="card" style={{ width: '18rem' }}>
+                  <img
+                    src="https://placehold.co/400x200"
+                    class="card-img-top"
+                    alt="placehold"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Name:</p>
+                    <p class="card-text">Hair Color:</p>
+                    <p class="card-text">Eye Color:</p>
+                    <a href="#" class="btn btn-primary">
+                      Go somewhere
+                    </a>
+                  </div>
                 </div>
-                <div>
-                  <p>Gender:</p>
-                  <p>Hair Color:</p>
-                  <p>Eye Color:</p>
-                </div>
-                <div>
-                  <button>Learn More</button>
-                  <FaRegHeart />
-                </div>
-              </div>
+              </>
             );
           })}
       </div>
