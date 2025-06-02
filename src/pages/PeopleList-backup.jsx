@@ -33,21 +33,6 @@ export const PeopleList = () => {
             );
           })}
       </ul>
-      <div
-        className="card"
-        style={{ width: '18rem' }}
-        // <img src="..." className="card-img-top" alt="..."/>
-      >
-        <div className="card-body">
-          <h5 className="card-title">Card Title</h5>
-          <p className="card-text">Some Card Text</p>
-          <div className="d-flex align-items-center justify-content between">
-            <Link href="#" className="btn btn-primary">
-              Link to Someplace
-            </Link>
-          </div>
-        </div>
-      </div>
       <br />
 
       <Link to="/">
