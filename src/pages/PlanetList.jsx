@@ -27,14 +27,16 @@ export const PlanetList = () => {
                   <div className="card-body">
                     <h5 className="card-title">{planet.properties.name}</h5>
                     <p className="card-text">
-                      Capacity:{planet.properties.cargo_capacity}
+                      Terrain:{planet.properties.terrain}
                     </p>
                     <p className="card-text">
-                      Passengers:{planet.properties.passengers}
+                      Gravity:{planet.properties.gravity}
                     </p>
-                    <p className="card-text">Model:{planet.properties.model}</p>
                     <p className="card-text">
-                      Mfr:{planet.properties.manufacturer}
+                      Population:{planet.properties.population}
+                    </p>
+                    <p className="card-text">
+                      Climate:{planet.properties.climate}
                     </p>
                     <div className="button-wrap d-flex align-items-center justify-content-evenly">
                       <a href="#" className="btn btn-outline-primary btn-sm">
