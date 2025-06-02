@@ -16,7 +16,7 @@ export const PeopleList = () => {
       <div className="d-flex">
         <h2 className="">Characters</h2>
       </div>
-      <div className="ps-4 d-flex gap-4 flex-nowrap overflow-x-scroll">
+      <div className="ps-4 d-flex gap-4 flex-nowrap overflow-x-scroll pe-4">
         {store &&
           store.people.map((person) => {
             return (
