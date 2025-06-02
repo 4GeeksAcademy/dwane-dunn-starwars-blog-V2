@@ -7,31 +7,46 @@ export const PlanetList = () => {
   const { store, dispatch } = useGlobalReducer();
 
   return (
-    <div className="container">
-      <ul className="list-group">
-        <h2>Planets</h2>
+    <>
+      <section className="d-flex">
+        <h2 className="ps-4">Planets</h2>
+      </section>
+      <div className="ps-4 d-flex gap-4 flex-nowrap overflow-x-scroll pe-4">
         {/* Map over the 'todos' array from the store and render each item as a list element */}
         {store &&
           store.planets?.map((planet) => {
             return (
-              <li
-                key={planet.uid} // React key for list items.
-                className="list-group-item d-flex justify-content-between"
-                // style={{ background: item.background }}
-              >
-                {/* Link to the detail page of this todo. */}
-                <Link to={'/planets/' + planet.properties.uid}>
-                  Link to: {planet.properties.name}{' '}
-                </Link>
-              </li>
+              <div key={planet.uid}>
+                <div className="card" style={{ width: '18rem' }}>
+                  <img
+                    src="https://placehold.co/400x200"
+                    className="card-img-top"
+                    alt={planet.description}
+                  />
+                  <div className="card-body">
+                    <h5 className="card-title">{planet.properties.name}</h5>
+                    <p className="card-text">
+                      Capacity:{planet.properties.cargo_capacity}
+                    </p>
+                    <p className="card-text">
+                      Passengers:{planet.properties.passengers}
+                    </p>
+                    <p className="card-text">Model:{planet.properties.model}</p>
+                    <p className="card-text">
+                      Mfr:{planet.properties.manufacturer}
+                    </p>
+                    <div className="button-wrap d-flex align-items-center justify-content-evenly">
+                      <a href="#" className="btn btn-outline-primary btn-sm">
+                        Learn More
+                      </a>
+                      <FaRegHeart />
+                    </div>
+                  </div>
+                </div>
+              </div>
             );
           })}
-      </ul>
-      <br />
-
-      <Link to="/">
-        <button className="btn btn-primary">Back home</button>
-      </Link>
-    </div>
+      </div>
+    </> // jsx wrap
   );
 };
