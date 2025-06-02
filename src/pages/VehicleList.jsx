@@ -10,7 +10,7 @@ export const VehicleList = () => {
   return (
     <>
       <section className="d-flex">
-        <h2 className="">Vehicles</h2>
+        <h2 className="ps-4">Vehicles</h2>
       </section>
       <div className="ps-4 d-flex gap-4 flex-nowrap overflow-x-scroll pe-4">
         {/* Map over the 'todos' array from the store and render each item as a list element */}
@@ -36,7 +36,7 @@ export const VehicleList = () => {
                       Model:{vehicle.properties.model}
                     </p>
                     <p className="card-text">
-                      Mfr:{vehicle.properties.manufacturerer}
+                      Mfr:{vehicle.properties.manufacturer}
                     </p>
                     <div className="button-wrap d-flex align-items-center justify-content-evenly">
                       <a href="#" className="btn btn-outline-primary btn-sm">
