@@ -47,7 +47,7 @@ export const PeopleList = () => {
                       <a href="#" className="btn btn-outline-primary btn-sm">
                         Learn More
                       </a>
-                      <FaRegHeart />
+                      <FaRegHeart onClick={() => console.log('fav click')} />
                     </div>
                   </div>
                 </div>
