@@ -33,31 +33,34 @@ export const VehicleList = () => {
         {store &&
           store.vehicles?.map((vehicle) => {
             return (
-              <>
-                <li
-                  key={vehicle.uid} // React key for list items.
-                  className="list-group-item d-flex justify-content-between"
-                  // style={{ background: item.background }}
-                >
-                  {/* Link to the detail page of this todo. */}
-                  <Link to={'/vehicle/' + vehicle.uid}>
-                    Link to: {vehicle.properties.name}{' '}
-                  </Link>
-
-                  {/* <p>
-                    Open file ./store.js to see the global store that contains
-                    and updates the list of colors
-                  </p> */}
-
-                  {/* <button className="btn btn-success"
-                onClick={() => dispatch({
-                  type: "add_task",
-                  payload: { id: item.id, color: '#ffa500' }
-                })}>
-                Change Color
-              </button> */}
-                </li>
-              </>
+              <div key={vehicle.uid}>
+                <div class="card" style={{ width: '18rem' }}>
+                  <img
+                    src="https://placehold.co/400x200"
+                    class="card-img-top"
+                    alt={vehicle.description}
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">{vehicle.properties.name}</h5>
+                    <p class="card-text">
+                      Capacity:{vehicle.properties.cargo_capacity}
+                    </p>
+                    <p class="card-text">
+                      Passengers:{vehicle.properties.passengers}
+                    </p>
+                    <p class="card-text">Model:{vehicle.properties.model}</p>
+                    <p class="card-text">
+                      Mfr:{vehicle.properties.manufacturerer}
+                    </p>
+                    <div className="button-wrap d-flex align-items-center justify-content-evenly">
+                      <a href="#" class="btn btn-outline-primary btn-sm">
+                        Learn More
+                      </a>
+                      <FaRegHeart />
+                    </div>
+                  </div>
+                </div>
+              </div>
             );
           })}
       </ul>

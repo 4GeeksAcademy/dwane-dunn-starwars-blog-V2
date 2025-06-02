@@ -77,7 +77,7 @@ export const Home = () => {
     <div className="text-center mt-5">
       <PeopleList />
       <PlanetList />
-      <VehicleList />
+      {/* <VehicleList /> */}
     </div>
   );
 };
