@@ -32,10 +32,11 @@ export const PeopleList = () => {
                     <p class="card-text">Name:</p>
                     <p class="card-text">Hair Color:</p>
                     <p class="card-text">Eye Color:</p>
-                    <div className="button-wrap d-flex">
+                    <div className="button-wrap d-flex align-items-center justify-content-evenly">
                       <a href="#" class="btn btn-outline-primary btn-sm">
                         Learn More
                       </a>
+                      <FaRegHeart />
                     </div>
                   </div>
                 </div>
