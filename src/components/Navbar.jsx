@@ -16,6 +16,7 @@ export const Navbar = () => {
         </Link>
         <div className="ml-auto">
           {/* <Link to="/"> */}
+          {/* <FaRegTrashAlt /> */}
           <button
             className="btn btn-primary dropdown-toggle"
             type="button"
