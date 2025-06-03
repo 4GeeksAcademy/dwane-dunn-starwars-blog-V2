@@ -28,7 +28,7 @@ export const PeopleList = () => {
                   key={person.uid}
                 >
                   <img
-                    src="https://placehold.co/400x200"
+                    src={`https://github.com/breatheco-de/swapi-images/blob/master/public/images/people/${person.uid}.jpg?raw=true`}
                     className="card-img-top"
                     alt={person.name}
                   />
@@ -48,7 +48,14 @@ export const PeopleList = () => {
                       <a href="#" className="btn btn-outline-primary btn-sm">
                         Learn More
                       </a>
-                      <FaRegHeart onClick={() => console.log('fav click')} />
+                      <FaRegHeart
+                        onClick={() =>
+                          dispatch({
+                            type: 'toggle_fav',
+                            payload: person,
+                          })
+                        }
+                      />
                     </div>
                   </div>
                 </div>

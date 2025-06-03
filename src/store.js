@@ -39,13 +39,14 @@ export default function storeReducer(store, action = {}) {
         ...store,
         vehicles: action.payload,
       };
-    case 'add_favorites':
+    case 'toggle_fav':
+      const alreadyFavorited = store.favorites.includes(action.payload);
       return {
         ...store,
-        favorites: action.payload,
+        favorites: alreadyFavorited
+          ? store.favorites.filter((obj) => obj !== action.payload)
+          : [...store.favorites, action.payload],
       };
-    case 'deleted_favorite':
-    // return favorites.filter((favorite) => favorite.id ! action.id);
 
     default:
       throw Error('Unknown action.');

@@ -8,6 +8,7 @@ const handleDeleteFavorite = (id) => {
 };
 
 export const Navbar = () => {
+  const { store } = useGlobalReducer();
   return (
     <nav className="navbar navbar-light bg-light">
       <div className="container">
@@ -16,7 +17,7 @@ export const Navbar = () => {
         </Link>
         <div className="ml-auto">
           {/* <Link to="/"> */}
-          {/* <FaRegTrashAlt /> */}
+
           <button
             className="btn btn-primary dropdown-toggle"
             type="button"
@@ -24,26 +25,18 @@ export const Navbar = () => {
             data-bs-toggle="dropdown"
             aria-expanded="false"
           >
-            Favorites <span className="badge bg-secondary">1</span>
+            Favorites{' '}
+            <span className="badge bg-secondary">{store.favorites.length}</span>
           </button>
           <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-            <li>
-              <a className="dropdown-item" href="#">
-                Action
-              </a>
-            </li>
-            <li>
-              <a className="dropdown-item" href="#">
-                Another action
-              </a>
-            </li>
-            <li>
-              <a className="dropdown-item" href="#">
-                Something else here
-              </a>
-            </li>
+            {store.favorites.map((favorite) => {
+              <li>
+                <a className="dropdown-item" href="#">
+                  {favorite.properties.name}
+                </a>
+              </li>;
+            })}
           </ul>
-          {/* </Link> */}
         </div>
       </div>
     </nav>
