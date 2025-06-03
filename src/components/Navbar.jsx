@@ -1,6 +1,7 @@
 import useGlobalReducer from '../hooks/useGlobalReducer'; // Custom hook for accessing the global state.
 
 import { Link } from 'react-router-dom';
+import { FaRegTrashAlt } from 'react-icons/fa';
 
 const handleDeleteFavorite = (id) => {
   dispatchEvent({ type: 'deleted_favorite', id });
