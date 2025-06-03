@@ -20,7 +20,7 @@ export const initialStore = () => {
       {
         id: 1,
         name: 'Steve Hawk',
-        delete: Trash,
+        delete: 'Trash',
       },
     ],
   };
