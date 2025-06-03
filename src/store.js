@@ -44,7 +44,7 @@ export default function storeReducer(store, action = {}) {
         ...store,
         favorites: action.payload,
       };
-    case 'deleted_favotie':
+    case 'deleted_favorite':
     // return favorites.filter((favorite) => favorite.id ! action.id);
 
     default:
