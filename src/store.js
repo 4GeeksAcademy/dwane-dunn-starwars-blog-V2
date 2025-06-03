@@ -16,13 +16,7 @@ export const initialStore = () => {
     people: [],
     planets: [],
     vehicles: [],
-    favorites: [
-      {
-        id: 1,
-        name: 'Steve Hawk',
-        delete: 'Trash',
-      },
-    ],
+    favorites: [],
   };
 };
 
