@@ -20,9 +20,9 @@ export const PlanetList = () => {
               <div key={planet.uid}>
                 <div className="card" style={{ width: '18rem' }}>
                   <img
-                    src="https://placehold.co/400x200"
+                    src={`https://github.com/breatheco-de/swapi-images/blob/master/public/images/planets/${planet.uid}.jpg?raw=true`}
                     className="card-img-top"
-                    alt={planet.description}
+                    alt={planet.name}
                   />
                   <div className="card-body">
                     <h5 className="card-title">{planet.properties.name}</h5>
@@ -42,7 +42,14 @@ export const PlanetList = () => {
                       <a href="#" className="btn btn-outline-primary btn-sm">
                         Learn More
                       </a>
-                      <FaRegHeart />
+                      <FaRegHeart
+                        onClick={() =>
+                          dispatch({
+                            type: 'toggle_fav',
+                            payload: planet,
+                          })
+                        }
+                      />
                     </div>
                   </div>
                 </div>
