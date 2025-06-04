@@ -8,7 +8,7 @@ const handleDeleteFavorite = (id) => {
 };
 
 export const Navbar = () => {
-  const { store } = useGlobalReducer();
+  const { store, dispatch } = useGlobalReducer();
   return (
     <nav className="navbar navbar-light bg-light">
       <div className="container">
@@ -34,7 +34,14 @@ export const Navbar = () => {
                 <li key={favorite.uid}>
                   <a className="dropdown-item" href="#">
                     {favorite.properties.name}
-                    <FaRegTrashAlt />
+                    <FaRegTrashAlt
+                      onClick={() =>
+                        dispatch({
+                          type: 'toggle_fav',
+                          payload: person,
+                        })
+                      }
+                    />
                   </a>
                 </li>
               );
