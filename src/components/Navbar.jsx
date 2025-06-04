@@ -34,15 +34,17 @@ export const Navbar = () => {
                 <li key={favorite.uid}>
                   <a className="dropdown-item" href="#">
                     {favorite.properties.name}
-                    <FaRegTrashAlt
-                      onClick={() =>
-                        dispatch({
-                          type: 'toggle_fav',
-                          payload: person,
-                        })
-                      }
-                    />
                   </a>
+                  <button
+                    onClick={() =>
+                      dispatch({
+                        type: 'toggle_fav',
+                        payload: favorite,
+                      })
+                    }
+                  >
+                    <FaRegTrashAlt />
+                  </button>
                 </li>
               );
             })}
