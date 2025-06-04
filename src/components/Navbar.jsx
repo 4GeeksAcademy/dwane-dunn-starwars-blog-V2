@@ -25,16 +25,19 @@ export const Navbar = () => {
             data-bs-toggle="dropdown"
             aria-expanded="false"
           >
-            Favorites{' '}
+            Favorites
             <span className="badge bg-secondary">{store.favorites.length}</span>
           </button>
           <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
             {store.favorites.map((favorite) => {
-              <li>
-                <a className="dropdown-item" href="#">
-                  {favorite.properties.name}
-                </a>
-              </li>;
+              return (
+                <li key={favorite.uid}>
+                  <a className="dropdown-item" href="#">
+                    {favorite.properties.name}
+                    <FaRegTrashAlt />
+                  </a>
+                </li>
+              );
             })}
           </ul>
         </div>
