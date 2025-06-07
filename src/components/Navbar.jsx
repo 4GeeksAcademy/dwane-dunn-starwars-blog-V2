@@ -15,7 +15,7 @@ export const Navbar = () => {
         <Link to="/">
           <span className="navbar-brand mb-0 text-uppercase">Starwars</span>
         </Link>
-        <div className="ml-auto">
+        <div className="ml-auto btn-group">
           {/* <Link to="/"> */}
 
           <button
@@ -31,7 +31,7 @@ export const Navbar = () => {
           <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
             {store.favorites.map((favorite) => {
               return (
-                <li key={favorite.uid}>
+                <li key={favorite.uid} className="d-flex">
                   <a className="dropdown-item" href="#">
                     {favorite.properties.name}
                   </a>
