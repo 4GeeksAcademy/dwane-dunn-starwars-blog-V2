@@ -45,7 +45,10 @@ export const PeopleList = () => {
                       Eye Color:{person.properties.eye_color}
                     </p>
                     <div className="button-wrap d-flex align-items-center justify-content-evenly">
-                      <Link href="#" className="btn btn-outline-primary btn-sm">
+                      <Link
+                        to={`/person/${person.uid}`}
+                        className="btn btn-outline-primary btn-sm"
+                      >
                         Learn More
                       </Link>
                       <FaRegHeart
