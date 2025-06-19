@@ -39,9 +39,12 @@ export const PlanetList = () => {
                       Climate:{planet.properties.climate}
                     </p>
                     <div className="button-wrap d-flex align-items-center justify-content-evenly">
-                      <a href="#" className="btn btn-outline-primary btn-sm">
+                      <Link
+                        href={`/planet/${planet.uid}`}
+                        className="btn btn-outline-primary btn-sm"
+                      >
                         Learn More
-                      </a>
+                      </Link>
                       <FaRegHeart
                         onClick={() =>
                           dispatch({

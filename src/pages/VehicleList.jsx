@@ -39,9 +39,12 @@ export const VehicleList = () => {
                       Mfr:{vehicle.properties.manufacturer}
                     </p>
                     <div className="button-wrap d-flex align-items-center justify-content-evenly">
-                      <a href="#" className="btn btn-outline-primary btn-sm">
+                      <Link
+                        to={`/vehicle/${vehicle.uid}`}
+                        className="btn btn-outline-primary btn-sm"
+                      >
                         Learn More
-                      </a>
+                      </Link>
                       <FaRegHeart
                         onClick={() =>
                           dispatch({
