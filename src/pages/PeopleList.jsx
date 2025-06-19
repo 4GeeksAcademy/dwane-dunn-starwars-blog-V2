@@ -45,9 +45,9 @@ export const PeopleList = () => {
                       Eye Color:{person.properties.eye_color}
                     </p>
                     <div className="button-wrap d-flex align-items-center justify-content-evenly">
-                      <a href="#" className="btn btn-outline-primary btn-sm">
+                      <Link href="#" className="btn btn-outline-primary btn-sm">
                         Learn More
-                      </a>
+                      </Link>
                       <FaRegHeart
                         onClick={() =>
                           dispatch({
