@@ -8,9 +8,9 @@ import useGlobalReducer from '../hooks/useGlobalReducer';
 
 // Define and export the Single component which displays individual item details.
 export const Vehicle = () => {
+  const { uid } = useParams();
   const vehicleDetail = async () => {
-    const { uid } = useParams();
-    const response = await fetch(`https://www.swapi.tech/api/vehicle/${uid}`);
+    const response = await fetch(`https://www.swapi.tech/api/vehicles/${uid}`);
     const data = await response.json();
     setVehicle(data.result.properties);
   };

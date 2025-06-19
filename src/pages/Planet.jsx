@@ -9,9 +9,9 @@ import useGlobalReducer from '../hooks/useGlobalReducer'; // Import a custom hoo
 export const Planet = () => {
   const { uid } = useParams();
   const planetDetail = async () => {
-    const response = await fetch(`https://www.swapi.tech/api/planet/${uid}`);
+    const response = await fetch(`https://www.swapi.tech/api/planets/${uid}`);
     const data = await response.json();
-    setPerson(data.result.properties);
+    setPlanet(data.result.properties);
   };
   // Access the global state using the custom hook.
   const { store } = useGlobalReducer();
@@ -19,12 +19,11 @@ export const Planet = () => {
   useEffect(() => {
     planetDetail();
   }, [uid]);
-  // Retrieve the 'theId' URL parameter using useParams hook.
 
   return (
     <div className="container text-center">
       <h1>{planet.name}</h1>
-      <Link to={planet.name}>
+      <Link to="/">
         <span className="btn btn-primary btn-lg" href="#" role="button">
           Back home
         </span>
