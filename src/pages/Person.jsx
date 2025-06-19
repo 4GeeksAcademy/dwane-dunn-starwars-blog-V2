@@ -19,8 +19,7 @@ export const Person = () => {
   const [person, setPerson] = useState({});
   useEffect(() => {
     personDetail();
-  }, [uid]); // Fetch person details when the component mounts or uid changes.
-  // Retrieve the 'theId' URL parameter using useParams hook.
+  }, [uid]);
 
   return (
     <div className="container text-center">

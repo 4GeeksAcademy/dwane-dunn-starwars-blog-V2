@@ -23,6 +23,7 @@ export const Planet = () => {
 
   return (
     <div className="container text-center">
+      <h1>{planet.name}</h1>
       <Link to={planet.name}>
         <span className="btn btn-primary btn-lg" href="#" role="button">
           Back home

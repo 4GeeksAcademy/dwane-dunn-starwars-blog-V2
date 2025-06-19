@@ -40,7 +40,7 @@ export const PlanetList = () => {
                     </p>
                     <div className="button-wrap d-flex align-items-center justify-content-evenly">
                       <Link
-                        href={`/planet/${planet.uid}`}
+                        to={`/planet/${planet.uid}`}
                         className="btn btn-outline-primary btn-sm"
                       >
                         Learn More

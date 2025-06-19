@@ -17,8 +17,9 @@ export const Vehicle = () => {
   // Access the global state using the custom hook.
   const { store } = useGlobalReducer();
   const [vehicle, setVehicle] = useState({});
-
-  // Retrieve the 'theId' URL parameter using useParams hook.
+  useEffect(() => {
+    vehicleDetail();
+  }, [uid]);
 
   return (
     <div className="container text-center">
