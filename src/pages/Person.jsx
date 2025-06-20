@@ -23,7 +23,10 @@ export const Person = () => {
 
   return (
     <div className="container text-center">
-      <h1>{person.name}</h1>
+      <h1>Name: {person.name}</h1>
+      <p>Gender: {person.gender}</p>
+      <p>Hair Color: {person.hair_color}</p>
+      <p>Eye Color: {person.eye_color}</p>
       <Link to="/">
         <span className="btn btn-primary btn-lg" href="#" role="button">
           Back home
