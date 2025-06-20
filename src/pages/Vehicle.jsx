@@ -24,6 +24,9 @@ export const Vehicle = () => {
   return (
     <div className="container text-center">
       <h1>{vehicle.name}</h1>
+      <p>Consumbales: {vehicle.consumables}</p>
+      <p>Crew: {vehicle.crew}</p>
+      <p>Passengers: {vehicle.passengers}</p>
       <Link to="/">
         <span className="btn btn-primary btn-lg" href="#" role="button">
           Back home
