@@ -23,6 +23,10 @@ export const Planet = () => {
   return (
     <div className="container text-center">
       <h1>{planet.name}</h1>
+      <p>Climate: {planet.climate}</p>
+      <p>Orbital Period: {planet.orbital_period}</p>
+      <p>Population: {planet.population}</p>
+      <p>Terrain: {planet.terrain}</p>
       <Link to="/">
         <span className="btn btn-primary btn-lg" href="#" role="button">
           Back home
